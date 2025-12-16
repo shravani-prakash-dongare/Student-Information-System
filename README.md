@@ -1,13 +1,23 @@
-# Student Information System (Java)
+# Student Information System
 
-A beginner-friendly Java console application to manage student records.
+A Java console-based application to manage student records including name, age, grade, ID, and contact information.
 
 ## Features
-- Add student
-- View students
-- Search student
-- Input validation
+- Add student records
+- View all students
+- Data validation
+- Menu-driven interface
+
+## Technologies
+- Java
+- Scanner
+- OOP Principles
 
 ## How to Run
-javac src/*.java
-java src.StudentInformationSystem
+1. Clone repository
+2. Open in any Java IDE
+3. Run Main.java
+
+## Folder Structure
+- src/ → Source code
+- docs/ → Documentation & screenshots

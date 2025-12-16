@@ -1,35 +1,27 @@
 import java.util.ArrayList;
 
 public class StudentManager {
-
     private ArrayList<Student> students = new ArrayList<>();
+
+    public boolean isValidAge(int age) {
+        return age > 0;
+    }
+
+    public boolean isValidGrade(String grade) {
+        return grade.matches("[A-F]");
+    }
 
     public void addStudent(Student student) {
         students.add(student);
-        System.out.println("✅ Student added successfully!");
     }
 
-    public void viewStudents() {
+    public void displayStudents() {
         if (students.isEmpty()) {
             System.out.println("No students available.");
             return;
         }
-
-        System.out.printf("%-10s %-20s %-5s %-6s %-15s%n",
-                "ID", "Name", "Age", "Grade", "Contact");
-        System.out.println("-".repeat(60));
-
         for (Student s : students) {
-            s.display();
+            System.out.println(s);
         }
-    }
-
-    public Student searchById(String id) {
-        for (Student s : students) {
-            if (s.getStudentId().equalsIgnoreCase(id)) {
-                return s;
-            }
-        }
-        return null;
     }
 }
